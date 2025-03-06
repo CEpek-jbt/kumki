@@ -1,0 +1,24 @@
+# -------------------------------------------------- importゾーン --------------------------------------------------
+
+import fontforge # 相変わらず「インポート "fontforge" を解決できませんでした」と言われる日々（？）
+
+# 相対パスだかなんだかの関係で、componentsの前に . を入れないと「そんなモジュールないよ」って言われる　あとで理解しとく
+from .components import *
+
+# -------------------------------------------------- グリフいじり（？）をする！ --------------------------------------------------
+
+def lakof_generator(font, weight):
+
+    # 太さの設定
+    if weight == "Thin":
+        fontweight = 50
+    elif weight == "Regular":
+        fontweight = 100
+    elif weight == "Bold":
+        fontweight = 150
+
+    width = fontweight + 350
+
+    fw = fontweight
+    wd = width
+
