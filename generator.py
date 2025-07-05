@@ -11,8 +11,9 @@ def create_p(font):
 
     glyph.width = 1000
 
-    # ── ここから追加 ──
-    glyph.changeWeight(50)    # 数値を調整して好きな太さに
+    # ── ストロークで太らせる ──
+    # "stroke.pe" は一時ペンファイル名、ここに元パスをコピーして処理します
+    glyph.stroke("stroke.pe", 30, "round", "round", "foreground", "background")
     glyph.removeOverlap()
     glyph.round()
     # ── ここまで ──
