@@ -1,271 +1,217 @@
-
 import fontforge
 
-# poriginal
-def uppercircle(p, fw, wd):
-pen.moveTo((500, 500))
-pen.curveTo((500, 375),(750, 375),(750, 500))
-pen.curveTo((750, 625),(500, 625),(500, 500))
-pen.closePath()    
-
 # po
-def po(p, fw, wd):
-    pen.moveTo((1000, 0))       # 右棒
-    pen.lineTo((0, 0))          # 左下
-    pen.lineTo((500, 500))      # 中央右
-    pen.lineTo((500, 0))       # 左上
-    pen.curveTo((500,-250),(250,-500),(0, -500))
-    pen.curveTo((-250,-500),(-500,-250),(-500, 0))
-    pen.closePath()             # パスを閉じる
+def po(p):
+    p.moveTo((1000, 0))
+    p.lineTo((0, 0))
+    p.lineTo((500, 500))
+    p.lineTo((500, 0))
+    p.curveTo((500, -250), (250, -500), (0, -500))
+    p.curveTo((-250, -500), (-500, -250), (-500, 0))
+    p.closePath()
+
+# uppercircle
+def uppercircle(p):
+    p.moveTo((500, 500))
+    p.curveTo((500, 375), (750, 375), (750, 500))
+    p.curveTo((750, 625), (500, 625), (500, 500))
+    p.closePath()
 
 # pa
-def pa(p, fw, wd):
-    pen.moveTo((-500, 0))        # 左棒
-    pen.lineTo((500, 0))     # 右下
-    pen.lineTo((0, 500))    # 中央左
-    pen.lineTo((0, 0))      # 右上
-    pen.curveTo((250, 0), (500, -250), (500, -500))
-    pen.curveTo((750, -500), (1000, -250), (1000, 0))
-    pen.closePath()           # パスを閉じる
+def pa(p):
+    p.moveTo((-500, 0))
+    p.lineTo((500, 0))
+    p.lineTo((0, 500))
+    p.lineTo((0, 0))
+    p.curveTo((250, 0), (500, -250), (500, -500))
+    p.curveTo((750, -500), (1000, -250), (1000, 0))
+    p.closePath()
 
 # pœ
-def pœ(p, fw, wd):
-    pen.moveTo((1000, 0))       # 右棒
-    pen.lineTo((0, 0))          # 左上
-    pen.lineTo((500, -500))      # 中央右
-    pen.lineTo((500, 0))       # 右上
-    pen.curveTo((500, 250),(250, 500),(0, 500))
-    pen.curveTo((-250, 500),(-500, -250),(-500, 0))
-    pen.closePath()             # パスを閉じる
+def poe(p):
+    p.moveTo((1000, 0))
+    p.lineTo((0, 0))
+    p.lineTo((500, -500))
+    p.lineTo((500, 0))
+    p.curveTo((500, 250), (250, 500), (0, 500))
+    p.curveTo((-250, 500), (-500, -250), (-500, 0))
+    p.closePath()
 
 # pe
-def pe(p, fw, wd):
-    pen.moveTo((-500, 0))    # 左棒（上）
-    pen.lineTo((500, 0))     # 右上
-    pen.lineTo((0, 500))        # 中央右
-    pen.lineTo((0, 0))       # 左上
-    pen.curveTo((250, 0), (500, 250), (500, 500))
-    pen.curveTo((750, 500), (1000, 250), (1000, 0))
-    pen.closePath()             # パスを閉じる
+def pe(p):
+    p.moveTo((-500, 0))
+    p.lineTo((500, 0))
+    p.lineTo((0, 500))
+    p.lineTo((0, 0))
+    p.curveTo((250, 0), (500, 250), (500, 500))
+    p.curveTo((750, 500), (1000, 250), (1000, 0))
+    p.closePath()
 
 # pu
-def pu(p, fw, wd):
-    pen.moveTo((-500, 0))    # 左棒（上）
-    pen.lineTo((250, 0))     # 右上
-    pen.lineTo((250, 500))   # 中央右
-    pen.lineTo((-250, 0))       # 左上
-    pen.lineTo((1000, 0))
-    pen.lineTo((750,500))
-    pen.closePath()             # パスを閉じる
+def pu(p):
+    p.moveTo((-500, 0))
+    p.lineTo((250, 0))
+    p.lineTo((250, 500))
+    p.lineTo((-250, 0))
+    p.lineTo((1000, 0))
+    p.lineTo((750, 500))
+    p.closePath()
 
 # pw
-def pw(p, fw, wd):
-    pen.moveTo((-500, 0))    # 左棒（上）
-    pen.lineTo((250, 0))     # 右上
-    pen.lineTo((250, -500))   # 左下
-    pen.lineTo((0, 0))       # 左上
-    pen.lineTo((1000, 0))
-    pen.lineTo((750,-500))
-    pen.closePath()             # パスを閉じる
+def pw(p):
+    p.moveTo((-500, 0))
+    p.lineTo((250, 0))
+    p.lineTo((250, -500))
+    p.lineTo((0, 0))
+    p.lineTo((1000, 0))
+    p.lineTo((750, -500))
+    p.closePath()
 
 # py
-def py(p, fw, wd):
-    pen.moveTo((1000, 0))    # 左棒（上）
-    pen.lineTo((250, 0))     # 右上
-    pen.lineTo((250, 500))   # 左下
-    pen.lineTo((750, 0))       # 左上
-    pen.lineTo((-500, 0))
-    pen.lineTo((-250,500))
-    pen.closePath()             # パスを閉じる
+def py(p):
+    p.moveTo((1000, 0))
+    p.lineTo((250, 0))
+    p.lineTo((250, 500))
+    p.lineTo((750, 0))
+    p.lineTo((-500, 0))
+    p.lineTo((-250, 500))
+    p.closePath()
 
 # pi
-def pi(p, fw, wd):
-    pen.moveTo((1000, 0))    # 左棒（上）
-    pen.lineTo((250, 0))     # 右上
-    pen.lineTo((250, -500))   # 左下
-    pen.lineTo((750, 0))       # 左上
-    pen.lineTo((-500, 0))
-    pen.lineTo((-250,-500))
-    pen.closePath()             # パスを閉じる
+def pi(p):
+    p.moveTo((1000, 0))
+    p.lineTo((250, 0))
+    p.lineTo((250, -500))
+    p.lineTo((750, 0))
+    p.lineTo((-500, 0))
+    p.lineTo((-250, -500))
+    p.closePath()
 
-# 右上左向き短横棒
-def upperrightleftwardHorizontalBar(p, fw, wd):
-    pen.moveTo((750,500))
-    pen.lineTo((500, 500))
-    pen.closePath()             # パスを閉じる
+# upperrightleftwardHorizontalBar
+def upperrightleftwardHorizontalBar(p):
+    p.moveTo((750, 500))
+    p.lineTo((500, 500))
+    p.closePath()
 
-# 右下左向き短横棒
-def lowerrightleftwardHorizontalBar(p, fw, wd):
-    pen.moveTo((750,-500))
-    pen.lineTo((500, -500))
-    pen.closePath()             # パスを閉じる
+# lowerrightleftwardHorizontalBar
+def lowerrightleftwardHorizontalBar(p):
+    p.moveTo((750, -500))
+    p.lineTo((500, -500))
+    p.closePath()
 
-# 左上右向き短横棒
-def upperleftrightwardHorizontalBar(p, fw, wd):
-    pen.moveTo((-250,500))
-    pen.lineTo((0, 500))
-    pen.closePath()             # パスを閉じる
+# upperleftrightwardHorizontalBar
+def upperleftrightwardHorizontalBar(p):
+    p.moveTo((-250, 500))
+    p.lineTo((0, 500))
+    p.closePath()
 
-# 左上右向き短横棒
-def lowerleftrightwardHorizontalBar(p, fw, wd):
-    pen.moveTo((-250,-500))
-    pen.lineTo((0, -500))
-    pen.closePath()             # パスを閉じる
+# lowerleftrightwardHorizontalBar
+def lowerleftrightwardHorizontalBar(p):
+    p.moveTo((-250, -500))
+    p.lineTo((0, -500))
+    p.closePath()
 
-# 右上右向き短横棒
-def upperrightrightwardHorizontalBar(p, fw, wd):
-    pen.moveTo((750,500))
-    pen.lineTo((1000, 500))
-    pen.closePath()             # パスを閉じる
+# upperrightrightwardHorizontalBar
+def upperrightrightwardHorizontalBar(p):
+    p.moveTo((750, 500))
+    p.lineTo((1000, 500))
+    p.closePath()
 
-# 右下右向き短横棒
-def lowerrightrightwardHorizontalBar(p, fw, wd):
-    pen.moveTo((750,-500))
-    pen.lineTo((1000, -500))
-    pen.closePath()             # パスを閉じる
+# lowerrightrightwardHorizontalBar
+def lowerrightrightwardHorizontalBar(p):
+    p.moveTo((750, -500))
+    p.lineTo((1000, -500))
+    p.closePath()
 
-# 左上左向き短横棒
-def upperleftleftwardHorizontalBar(p, fw, wd):
-    pen.moveTo((-250,500))
-    pen.lineTo((-500, 500))
-    pen.closePath()             # パスを閉じる
+# upperleftleftwardHorizontalBar
+def upperleftleftwardHorizontalBar(p):
+    p.moveTo((-250, 500))
+    p.lineTo((-500, 500))
+    p.closePath()
 
-# 左上左向き短横棒
-def lowerleftleftwardHorizontalBar(p, fw, wd):
-    pen.moveTo((-250,-500))
-    pen.lineTo((-500, -500))
-    pen.closePath()             # パスを閉じる
+# lowerleftleftwardHorizontalBar
+def lowerleftleftwardHorizontalBar(p):
+    p.moveTo((-250, -500))
+    p.lineTo((-500, -500))
+    p.closePath()
 
 # ko
-def ko(p, fw, wd):
-    pen.moveTo((-500, 0))
-    pen.curveTo((-375, 0), (-250, -500), (-125,-500))
-    pen.curveTo((-125, -250), (0, -125), (250, 0))
-    pen.curveTo((250, 125), (125, 250), (-125, 250))
-    pen.lineTo((500, 500))
-    pen.closePath()             # パスを閉じる
+def ko(p):
+    p.moveTo((-500, 0))
+    p.curveTo((-375, 0), (-250, -500), (-125, -500))
+    p.curveTo((-125, -250), (0, -125), (250, 0))
+    p.curveTo((250, 125), (125, 250), (-125, 250))
+    p.lineTo((500, 500))
+    p.closePath()
 
-#ko midi
-def komidi(p, fw, wd):
-    pen.moveTo((250, 0))
-    pen.lineTo((1000, 0))
-    pen.closePath()             # パスを閉じる
+# komidi
+def komidi(p):
+    p.moveTo((250, 0))
+    p.lineTo((1000, 0))
+    p.closePath()
 
 # ka
-def ka(p, fw, wd):
-    pen.moveTo((1000, 0))
-    pen.curveTo((875, 0), (750, -500), (625,-500))
-    pen.curveTo((625, -500), (500, -125), (-250, 0))
-    pen.curveTo((250, 125), (375, 250), (625, 250))
-    pen.lineTo((-500, 500))
-    pen.closePath()
+def ka(p):
+    p.moveTo((1000, 0))
+    p.curveTo((875, 0), (750, -500), (625, -500))
+    p.curveTo((625, -500), (500, -125), (-250, 0))
+    p.curveTo((250, 125), (375, 250), (625, 250))
+    p.lineTo((-500, 500))
+    p.closePath()
 
 # kœ
-def kœ(p, fw, wd):
-    pen.moveTo((-500, 0))  # Reflected start point (no change)
-    pen.curveTo((-375, 0), (-250, 500), (-125, 500))  # First reflected curve
-    pen.curveTo((-125, 250), (0, 125), (250, 0))  # Second reflected curve
-    pen.curveTo((250, -125), (125, -250), (-125, -250))  # Third reflected curve
-    pen.lineTo((500, -500))  # Reflected line
-    pen.closePath()  # Close the path
-
-# ke
-def ka(p, fw, wd):
-    pen.moveTo((1000, 0))
-    pen.curveTo((875, 0), (750, -500), (625,-500))
-    pen.curveTo((625, -500), (500, -125), (-250, 0))
-    pen.curveTo((250, 125), (375, 250), (625, 250))
-    pen.lineTo((-500, 500))
-    pen.closePath()
+def koe(p):
+    p.moveTo((-500, 0))
+    p.curveTo((-375, 0), (-250, 500), (-125, 500))
+    p.curveTo((-125, 250), (0, 125), (250, 0))
+    p.curveTo((250, -125), (125, -250), (-125, -250))
+    p.lineTo((500, -500))
+    p.closePath()
 
 # ku
-def ku(p, fw, wd):
-    pen.moveTo((-500, -500)
-    pen.lineTo((-250, 125))
-    pen.curveTo((-167, 125), (0, -42), (0, -125))
-    pen.curveTo((167, -125), (333, 125), (500, 125))
-
-# kw
-def ku(p, fw, wd):
-    pen.moveTo((-500, 500))
-    pen.lineTo((-250, -125))
-    pen.curveTo((-167, -125), (0, 42), (0, 125))
-    pen.curveTo((167, 125), (333, -125), (500, -125))
+def ku(p):
+    p.moveTo((-500, -500))
+    p.lineTo((-250, 125))
+    p.curveTo((-167, 125), (0, -42), (0, -125))
+    p.curveTo((167, -125), (333, 125), (500, 125))
+    p.closePath()
 
 # ky
-def ky(p, fw, wd):
-    pen.moveTo((500, -500))
-    pen.lineTo((250, 125))
-    pen.curveTo((167, 125), (0, -42), (0, -125))
-    pen.curveTo((-167, -125), (-333, 125), (-500, 125))
+def ky(p):
+    p.moveTo((500, -500))
+    p.lineTo((250, 125))
+    p.curveTo((167, 125), (0, -42), (0, -125))
+    p.curveTo((-167, -125), (-333, 125), (-500, 125))
+    p.closePath()
 
-def ki(p, fw, wd):
-    pen.moveTo((500, 500))
-    pen.lineTo((250, -125))
-    pen.curveTo((167, -125), (0, 42), (0, 125))
-    pen.curveTo((-167, 125), (-333, -125), (-500, -125))
-
-# kukw midiend(p, fw, wd)
-    pen.moveTo((-500, 0))
-    pen.lineTo((-300, 0)
-
-# kyki midiend(p, fw, wd)
-    pen.moveTo((1000, 0))
-    pen.lineTo((300, 0)
+# ki
+def ki(p):
+    p.moveTo((500, 500))
+    p.lineTo((250, -125))
+    p.curveTo((167, -125), (0, 42), (0, 125))
+    p.curveTo((-167, 125), (-333, -125), (-500, -125))
+    p.closePath()
 
 # to
-def to(p, fw, wd):
-    pen.moveTo((-500, 0))
-    pen.curveTo((-375, 0), (-250, -500), (-125,-500))
-    pen.curveTo((-125, -250), (0, -125), (250, 0))
-    pen.curveTo((250, 125), (125, 250), (-125, 250))
-    pen.closePath()             # パスを閉じる
+def to(p):
+    p.moveTo((-500, 0))
+    p.curveTo((-375, 0), (-250, -500), (-125, -500))
+    p.curveTo((-125, -250), (0, -125), (250, 0))
+    p.curveTo((250, 125), (125, 250), (-125, 250))
+    p.closePath()
 
 # ta
-def ta(p, fw, wd):
-    pen.moveTo((1000, 0))
-    pen.curveTo((875, 0), (750, -500), (625,-500))
-    pen.curveTo((625, -500), (500, -125), (-250, 0))
-    pen.curveTo((250, 125), (375, 250), (625, 250))
-    pen.closePath()
+def ta(p):
+    p.moveTo((1000, 0))
+    p.curveTo((875, 0), (750, -500), (625, -500))
+    p.curveTo((625, -500), (500, -125), (-250, 0))
+    p.curveTo((250, 125), (375, 250), (625, 250))
+    p.closePath()
 
 # tœ
-def tœ(p, fw, wd):
-    pen.moveTo((-500, 0))  # Reflected start point (no change)
-    pen.curveTo((-375, 0), (-250, 500), (-125, 500))  # First reflected curve
-    pen.curveTo((-125, 250), (0, 125), (250, 0))  # Second reflected curve
-    pen.curveTo((250, -125), (125, -250), (-125, -250))  # Third reflected curve
-    pen.closePath()  # Close the path
-
-# te
-def ka(p, fw, wd):
-    pen.moveTo((1000, 0))
-    pen.curveTo((875, 0), (750, -500), (625,-500))
-    pen.curveTo((625, -500), (500, -125), (-250, 0))
-    pen.curveTo((250, 125), (375, 250), (625, 250))
-    pen.closePath()
-
-# tu
-def ku(p, fw, wd):
-    pen.moveTo((-250, 125)
-    pen.curveTo((-167, 125), (0, -42), (0, -125))
-    pen.curveTo((167, -125), (333, 125), (500, 125))
-
-# tw
-def ku(p, fw, wd):
-    pen.moveTo((-250, -125))
-    pen.curveTo((-167, -125), (0, 42), (0, 125))
-    pen.curveTo((167, 125), (333, -125), (500, -125))
-
-# ty
-def ky(p, fw, wd):
-    pen.moveTo((250, 125))
-    pen.curveTo((167, 125), (0, -42), (0, -125))
-    pen.curveTo((-167, -125), (-333, 125), (-500, 125))
-
-# ti
-def ki(p, fw, wd):
-    pen.moveTo((250, -125))
-    pen.curveTo((167, -125), (0, 42), (0, 125))
-    pen.curveTo((-167, 125), (-333, -125), (-500, -125))
-
+def toe(p):
+    p.moveTo((-500, 0))
+    p.curveTo((-375, 0), (-250, 500), (-125, 500))
+    p.curveTo((-125, 250), (0, 125), (250, 0))
+    p.curveTo((250, -125), (125, -250), (-125, -250))
+    p.closePath()
