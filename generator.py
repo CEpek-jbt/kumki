@@ -2,7 +2,7 @@ import fontforge
 
 from .components import
 
-def lakof_generator(font, weight):
+def kumki_generator(font, weight):
 
  glyph = font.createChar(ord("p"), "p")
     pen = glyph.glyphPen()
