@@ -1,3 +1,5 @@
+from components import po, uppercircle
+
 def create_p(font):
     glyph = font.createChar(ord('p'), 'p')
     pen = glyph.glyphPen()
