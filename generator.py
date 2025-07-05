@@ -12,8 +12,7 @@ def create_p(font):
     glyph.width = 1000
 
     # ── ストロークで外側にオフセット ──
-    # "stroke.pe" は一時的ペンファイル名
-    glyph.stroke("stroke.pe", 40, "round", "round", "foreground", "background")
+    # stroke(): (一時ペンファイル, オフセット量, 線端, 線結合, 方向)
+    glyph.stroke("stroke.pe", 40, "round", "round", "outside")
     glyph.removeOverlap()
     glyph.round()
-    # ────────────────────────────────
