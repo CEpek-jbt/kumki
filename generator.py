@@ -13,7 +13,7 @@ def create_p(font):
 
     # ── ストロークで外側にオフセット ──
     # "stroke.pe" は一時的ペンファイル名
-    glyph.stroke("stroke.pe", 30, "round", "round", "foreground", "background")
+    glyph.stroke("stroke.pe", 40, "round", "round", "foreground", "background")
     glyph.removeOverlap()
     glyph.round()
     # ────────────────────────────────
