@@ -1,6 +1,6 @@
 # -------------------------------------------------- importゾーン --------------------------------------------------
 
-import fontforge # 「インポート "fontforge" を解決できませんでした」って言われる……
+import fontforge
 import os
 
 from info import fontfamily_list
