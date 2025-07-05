@@ -1,3 +1,5 @@
+# generator.py
+
 from components import po, uppercircle
 
 def create_p(font):
@@ -8,3 +10,9 @@ def create_p(font):
     uppercircle(pen)
 
     glyph.width = 1000
+
+    # ── ここから追加 ──
+    glyph.changeWeight(20)    # 数値を調整して好きな太さに
+    glyph.removeOverlap()
+    glyph.round()
+    # ── ここまで ──
