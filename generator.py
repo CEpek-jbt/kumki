@@ -1,6 +1,6 @@
 import fontforge
 
-from .components import
+from components import po, uppercircle
 
 def kumki_generator(font, weight):
 
